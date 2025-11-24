@@ -10,9 +10,19 @@ namespace QuizPersistence
     internal record class RecursiveFolderCopy(string folderPath)
     {
         DirectoryInfo sourceInf = new DirectoryInfo(folderPath);
+        private const int MaxRecursionDepth = 100;
          
         public string CopyTo(string DestinationPath, bool recursive)
         {
+            return CopyTo(DestinationPath, recursive, 0);
+        }
+
+        private string CopyTo(string DestinationPath, bool recursive, int depth)
+        {
+            // Prevent stack overflow from excessive recursion depth
+            if (depth > MaxRecursionDepth)
+                throw new InvalidOperationException($"Maximum recursion depth ({MaxRecursionDepth}) exceeded. Possible circular directory structure or excessively deep folder hierarchy.");
+
             // Get information about the source directory
             var dir = new DirectoryInfo(folderPath);
 
@@ -38,7 +48,7 @@ namespace QuizPersistence
                 foreach (DirectoryInfo subDir in dirs)
                 {
                     string newDestinationDir = Path.Combine(DestinationPath, subDir.Name);
-                    CopyTo(subDir.FullName, true);
+                    new RecursiveFolderCopy(subDir.FullName).CopyTo(newDestinationDir, true, depth + 1);
                 }
             }
 
