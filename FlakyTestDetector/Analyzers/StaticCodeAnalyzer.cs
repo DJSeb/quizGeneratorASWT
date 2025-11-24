@@ -118,10 +118,20 @@ public class StaticCodeAnalyzer
 
     private bool HasStaticFieldAccess(MethodDeclarationSyntax method)
     {
-        return method.DescendantNodes()
+        // Look for member access to static fields (e.g., ClassName._field)
+        // This is a heuristic and may have false positives
+        var memberAccesses = method.DescendantNodes()
+            .OfType<MemberAccessExpressionSyntax>()
+            .Where(m => m.Expression is IdentifierNameSyntax id && 
+                       char.IsUpper(id.Identifier.Text[0]));
+        
+        // Also look for direct access to fields that start with underscore (common static field naming)
+        var identifiers = method.DescendantNodes()
             .OfType<IdentifierNameSyntax>()
-            .Any(i => char.IsUpper(i.Identifier.Text[0]) && 
-                     !i.Identifier.Text.StartsWith("Test"));
+            .Where(i => i.Identifier.Text.StartsWith("_") && 
+                       i.Parent is not MemberAccessExpressionSyntax);
+
+        return memberAccesses.Any() || identifiers.Any();
     }
 
     private bool HasFileSystemOperations(MethodDeclarationSyntax method)

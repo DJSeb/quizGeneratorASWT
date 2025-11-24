@@ -200,9 +200,10 @@ public class FlakyTestDetector
                         cleanupMethod.Invoke(testInstance, null);
                     }
                 }
-                catch
+                catch (Exception)
                 {
-                    // Ignore cleanup errors
+                    // Ignore cleanup errors - we don't want cleanup failures to affect 
+                    // the test result we're analyzing for flakiness
                 }
             }
         }

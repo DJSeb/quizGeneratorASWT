@@ -124,9 +124,10 @@ public class FlakyTestRunner
                     }
                 }
             }
-            catch
+            catch (Exception)
             {
-                // Static analysis is best-effort
+                // Static analysis is best-effort - if we can't load source files or parse them,
+                // we simply skip static analysis for this test and continue with behavioral detection
             }
         }
     }

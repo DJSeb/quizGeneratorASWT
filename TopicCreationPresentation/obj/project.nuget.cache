@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "VhiusGc9AdzyaiVIurm+AHf+HWrn3K0O3+8FJxEB4xVn4JMMN1PubRPlPk0Z07+ibaSMhvOGfBMCdJi/3lXPmA==",
+  "dgSpecHash": "k4py3qr98xU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jarom\\Desktop\\PG_CVIČENÍ\\quizGenerator\\TopicCreationPresentation\\TopicCreationPresentation.csproj",
+  "projectFilePath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/TopicCreationPresentation/TopicCreationPresentation.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jarom\\.nuget\\packages\\htmlagilitypack\\1.11.67\\htmlagilitypack.1.11.67.nupkg.sha512",
-    "C:\\Users\\jarom\\.nuget\\packages\\refit\\7.1.2\\refit.7.1.2.nupkg.sha512",
-    "C:\\Users\\jarom\\.nuget\\packages\\system.codedom\\9.0.0-preview.6.24327.7\\system.codedom.9.0.0-preview.6.24327.7.nupkg.sha512",
-    "C:\\Users\\jarom\\.nuget\\packages\\system.net.http.json\\8.0.0\\system.net.http.json.8.0.0.nupkg.sha512",
-    "C:\\Users\\jarom\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
-    "C:\\Users\\jarom\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/htmlagilitypack/1.11.67/htmlagilitypack.1.11.67.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/refit/8.0.0/refit.8.0.0.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/system.codedom/9.0.0-preview.6.24327.7/system.codedom.9.0.0-preview.6.24327.7.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.windowsdesktop.app.ref/8.0.22/microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }
