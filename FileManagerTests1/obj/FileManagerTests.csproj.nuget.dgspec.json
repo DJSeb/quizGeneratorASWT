@@ -10,7 +10,7 @@
         "projectUniqueName": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagerTests1/FileManagerTests.csproj",
         "projectName": "FileManagerTests",
         "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagerTests1/FileManagerTests.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
+        "packagesPath": "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages",
         "outputPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagerTests1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
@@ -83,6 +83,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -98,7 +112,7 @@
         "projectUniqueName": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj",
         "projectName": "QuizPersistence",
         "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
+        "packagesPath": "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages",
         "outputPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
@@ -152,6 +166,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -167,7 +195,7 @@
         "projectUniqueName": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj",
         "projectName": "NotesParsing",
         "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj",
-        "packagesPath": "/home/runner/.nuget/packages/",
+        "packagesPath": "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages",
         "outputPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
@@ -217,6 +245,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
