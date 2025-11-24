@@ -131,7 +131,7 @@ namespace QuizPersistence
             // Prevent stack overflow from too many recursive calls
             if (depth > 1000)
             {
-                // Add timestamp to ensure uniqueness if too many renames attempted
+                // Add timestamp to ensure uniqueness and stop recursion
                 newName = newName + "_" + DateTime.Now.Ticks;
             }
 
@@ -139,6 +139,8 @@ namespace QuizPersistence
             if (currentTopicName == null) return null;
 
             string newPath = Path.Combine(currentTopicName, QuestionsFile.toTopicFileName(newName));
+            
+            // Only recurse if depth limit not exceeded
             if (Directory.Exists(newPath) && depth <= 1000)
             {
                 string uniqueName = addCopyToName(newName);

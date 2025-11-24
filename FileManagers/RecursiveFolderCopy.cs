@@ -24,16 +24,16 @@ namespace QuizPersistence
                 throw new InvalidOperationException($"Maximum recursion depth ({MaxRecursionDepth}) exceeded. Possible circular directory structure or excessively deep folder hierarchy.");
 
             // Get information about the source directory
-            var dir = new DirectoryInfo(folderPath);
+            var dir = sourceInf;
 
-            if (!sourceInf.Exists)
-                throw new DirectoryNotFoundException($"Source directory not found: {sourceInf.FullName}");
+            if (!dir.Exists)
+                throw new DirectoryNotFoundException($"Source directory not found: {dir.FullName}");
 
             // Cache directories before we start copying
-            DirectoryInfo[] dirs = sourceInf.GetDirectories();
+            DirectoryInfo[] dirs = dir.GetDirectories();
 
             // Create the destination directory
-            Directory.CreateDirectory(DestinationPath + sourceInf.Name);
+            Directory.CreateDirectory(DestinationPath + dir.Name);
 
             // Get the files in the source directory and copy to the destination directory
             foreach (FileInfo file in dir.GetFiles())
