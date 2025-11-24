@@ -1,0 +1,336 @@
+╔══════════════════════════════════════════════════════════════════╗
+║           FLAKY TEST DETECTION REPORT                            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+⚠ Found 18 flaky test(s)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: RandomFlakyTests.Test_RandomFailure
+Flakiness Factor: 40.0 % (0.400)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     4 (40.0 %)
+  ✗ Failed:     6 (60.0 %)
+
+Detected Issues:
+  • Uses Random without explicit seed which can cause non-deterministic behavior
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Use Random with a fixed seed (e.g., new Random(0)) for deterministic tests
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+Sample Failures:
+  Run #2: Assert.IsTrue failed. 'condition' expression: 'value < 5'. Expected value < 5, got 9
+  Run #3: Assert.IsTrue failed. 'condition' expression: 'value < 5'. Expected value < 5, got 7
+  Run #4: Assert.IsTrue failed. 'condition' expression: 'value < 5'. Expected value < 5, got 6
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: ConcurrencyFlakyTests.Test_ConcurrentIncrement
+Flakiness Factor: 30.0 % (0.300)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     7 (70.0 %)
+  ✗ Failed:     3 (30.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+Sample Failures:
+  Run #1: Assert.AreEqual failed. Expected:<1000>. Actual:<999>. 'expected' expression: '1000', 'actual' expression: '_counter'. Expected 1000 but got 999
+  Run #8: Assert.AreEqual failed. Expected:<1000>. Actual:<882>. 'expected' expression: '1000', 'actual' expression: '_counter'. Expected 1000 but got 882
+  Run #6: Assert.AreEqual failed. Expected:<1000>. Actual:<864>. 'expected' expression: '1000', 'actual' expression: '_counter'. Expected 1000 but got 864
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: RandomFlakyTests.Test_RandomCollectionOrder
+Flakiness Factor: 20.0 % (0.200)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     2 (20.0 %)
+  ✗ Failed:     8 (80.0 %)
+
+Detected Issues:
+  • Uses Random without explicit seed which can cause non-deterministic behavior
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Use Random with a fixed seed (e.g., new Random(0)) for deterministic tests
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+Sample Failures:
+  Run #0: Assert.AreEqual failed. Expected:<1>. Actual:<2>. 'expected' expression: '1', 'actual' expression: 'shuffled[0]'. First item should be 1
+  Run #2: Assert.AreEqual failed. Expected:<1>. Actual:<3>. 'expected' expression: '1', 'actual' expression: 'shuffled[0]'. First item should be 1
+  Run #4: Assert.AreEqual failed. Expected:<1>. Actual:<3>. 'expected' expression: '1', 'actual' expression: 'shuffled[0]'. First item should be 1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: ConcurrencyFlakyTests.Test_TimingDependency
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Uses DateTime.Now which can cause time-dependent flakiness
+  • Uses Task.Delay which can cause timing-dependent flakiness
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Use a clock abstraction or inject time as a dependency for testing
+  → Avoid timing-based waits; use proper synchronization mechanisms or mocking
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: ConcurrencyFlakyTests.Test_ThreadSleepFlaky
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Uses DateTime.Now which can cause time-dependent flakiness
+  • Uses Thread.Sleep which can cause timing-dependent flakiness
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Use a clock abstraction or inject time as a dependency for testing
+  → Avoid timing-based waits; use proper synchronization mechanisms or mocking
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: DateTimeFlakyTests.Test_FailsOnWeekend
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Uses DateTime.Now which can cause time-dependent flakiness
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Use a clock abstraction or inject time as a dependency for testing
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: DateTimeFlakyTests.Test_FailsAfterNoon
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Uses DateTime.Now which can cause time-dependent flakiness
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Use a clock abstraction or inject time as a dependency for testing
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: DateTimeFlakyTests.Test_OnlyPassesInCurrentMonth
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Uses DateTime.Now which can cause time-dependent flakiness
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Use a clock abstraction or inject time as a dependency for testing
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: OtherFlakyTests.Test_GuidGeneration
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+  • Generates GUIDs which are non-deterministic
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+  → Use deterministic values for testing or inject GUID generator as a dependency
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: OtherFlakyTests.Test_FileSystemDependency
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+  • Performs file system operations that may not be properly cleaned up
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+  → Use TestCleanup attribute to ensure file cleanup, or use in-memory alternatives
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: OtherFlakyTests.Test_UnsortedCollectionOrder
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: OtherFlakyTests.Test_StableWithDeterministicGuid
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: RandomFlakyTests.Test_WithFixedSeed_Stable
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: SharedStateFlakyTests.Test_IncrementCounter
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     0 (0.0 %)
+  ✗ Failed:     10 (100.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+Sample Failures:
+  Run #0: Assert.AreEqual failed. Expected:<1>. Actual:<11>. 'expected' expression: '1', 'actual' expression: '_sharedCounter'. Counter should be 1
+  Run #1: Assert.AreEqual failed. Expected:<1>. Actual:<12>. 'expected' expression: '1', 'actual' expression: '_sharedCounter'. Counter should be 1
+  Run #2: Assert.AreEqual failed. Expected:<1>. Actual:<13>. 'expected' expression: '1', 'actual' expression: '_sharedCounter'. Counter should be 1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: SharedStateFlakyTests.Test_CounterIsZero
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     0 (0.0 %)
+  ✗ Failed:     10 (100.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+Sample Failures:
+  Run #0: Assert.AreEqual failed. Expected:<0>. Actual:<20>. 'expected' expression: '0', 'actual' expression: '_sharedCounter'. Counter should start at 0
+  Run #1: Assert.AreEqual failed. Expected:<0>. Actual:<20>. 'expected' expression: '0', 'actual' expression: '_sharedCounter'. Counter should start at 0
+  Run #2: Assert.AreEqual failed. Expected:<0>. Actual:<20>. 'expected' expression: '0', 'actual' expression: '_sharedCounter'. Counter should start at 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: SharedStateFlakyTests.Test_AddToSharedList
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     0 (0.0 %)
+  ✗ Failed:     10 (100.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+Sample Failures:
+  Run #0: Assert.AreEqual failed. Expected:<1>. Actual:<11>. 'expected' expression: '1', 'actual' expression: '_sharedList.Count'.
+  Run #1: Assert.AreEqual failed. Expected:<1>. Actual:<12>. 'expected' expression: '1', 'actual' expression: '_sharedList.Count'.
+  Run #2: Assert.AreEqual failed. Expected:<1>. Actual:<13>. 'expected' expression: '1', 'actual' expression: '_sharedList.Count'.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: SharedStateFlakyTests.Test_SharedListIsEmpty
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     0 (0.0 %)
+  ✗ Failed:     10 (100.0 %)
+
+Detected Issues:
+  • Accesses static fields which may cause test order dependencies
+
+Suggested Fixes:
+  → Avoid shared mutable state; use test initialization/cleanup methods to reset state
+
+Sample Failures:
+  Run #0: Assert.AreEqual failed. Expected:<0>. Actual:<20>. 'expected' expression: '0', 'actual' expression: '_sharedList.Count'. List should be empty
+  Run #1: Assert.AreEqual failed. Expected:<0>. Actual:<20>. 'expected' expression: '0', 'actual' expression: '_sharedList.Count'. List should be empty
+  Run #2: Assert.AreEqual failed. Expected:<0>. Actual:<20>. 'expected' expression: '0', 'actual' expression: '_sharedList.Count'. List should be empty
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test: Test1.TestMethod1
+Flakiness Factor: 0.0 % (0.000)
+
+Execution Summary:
+  Total Runs:   10
+  ✓ Passed:     10 (100.0 %)
+  ✗ Failed:     0 (0.0 %)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Recommendations:
+  1. Review and fix the most flaky tests first (highest flakiness factor)
+  2. Ensure tests are independent and don't share mutable state
+  3. Use deterministic values for dates, random numbers, and GUIDs
+  4. Avoid timing-based waits; use proper synchronization
+  5. Clean up resources properly in TestCleanup methods
+

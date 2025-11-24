@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "ENDjgiONeV8CQ+KHdTonMbjRtufoQwuop2MJnmNCWehxDNt0L7ISjCPGUpCZmMbVvZrNfMwIcb8MhpAswhUW/A==",
+  "dgSpecHash": "NRIQPgPB8kI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QGenerator\\QuizGeneratorPresentation.csproj",
+  "projectFilePath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QGenerator/QuizGeneratorPresentation.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jarom\\.nuget\\packages\\htmlagilitypack\\1.11.67\\htmlagilitypack.1.11.67.nupkg.sha512",
-    "C:\\Users\\jarom\\.nuget\\packages\\refit\\8.0.0\\refit.8.0.0.nupkg.sha512",
-    "C:\\Users\\jarom\\.nuget\\packages\\system.codedom\\9.0.0-preview.6.24327.7\\system.codedom.9.0.0-preview.6.24327.7.nupkg.sha512"
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/htmlagilitypack/1.11.67/htmlagilitypack.1.11.67.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/refit/8.0.0/refit.8.0.0.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/system.codedom/9.0.0-preview.6.24327.7/system.codedom.9.0.0-preview.6.24327.7.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.windowsdesktop.app.ref/8.0.22/microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }

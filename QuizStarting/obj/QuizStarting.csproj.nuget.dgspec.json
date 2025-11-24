@@ -1,40 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizStarting\\QuizStarting.csproj": {}
+    "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizStarting/QuizStarting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\QuizPersistence.csproj": {
+    "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\QuizPersistence.csproj",
+        "projectUniqueName": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj",
         "projectName": "QuizPersistence",
-        "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\QuizPersistence.csproj",
-        "packagesPath": "C:\\Users\\jarom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\obj\\",
+        "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj",
+        "packagesPath": "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages",
+        "outputPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jarom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\NotesParsing\\NotesParsing.csproj": {
-                "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\NotesParsing\\NotesParsing.csproj"
+              "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj": {
+                "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj"
               }
             }
           }
@@ -48,7 +41,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -70,38 +64,45 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\NotesParsing\\NotesParsing.csproj": {
+    "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\NotesParsing\\NotesParsing.csproj",
+        "projectUniqueName": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj",
         "projectName": "NotesParsing",
-        "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\NotesParsing\\NotesParsing.csproj",
-        "packagesPath": "C:\\Users\\jarom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\NotesParsing\\obj\\",
+        "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj",
+        "packagesPath": "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages",
+        "outputPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jarom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -119,7 +120,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -141,46 +143,53 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizLogicalComponents\\AbstractChainStructure.csproj": {
+    "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizLogicalComponents/AbstractChainStructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizLogicalComponents\\AbstractChainStructure.csproj",
+        "projectUniqueName": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizLogicalComponents/AbstractChainStructure.csproj",
         "projectName": "AbstractChainStructure",
-        "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizLogicalComponents\\AbstractChainStructure.csproj",
-        "packagesPath": "C:\\Users\\jarom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizLogicalComponents\\obj\\",
+        "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizLogicalComponents/AbstractChainStructure.csproj",
+        "packagesPath": "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages",
+        "outputPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizLogicalComponents/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jarom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\QuizPersistence.csproj": {
-                "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\QuizPersistence.csproj"
+              "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj": {
+                "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj"
               }
             }
           }
@@ -194,7 +203,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -224,49 +234,56 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizStarting\\QuizStarting.csproj": {
+    "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizStarting/QuizStarting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizStarting\\QuizStarting.csproj",
+        "projectUniqueName": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizStarting/QuizStarting.csproj",
         "projectName": "QuizStarting",
-        "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizStarting\\QuizStarting.csproj",
-        "packagesPath": "C:\\Users\\jarom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizStarting\\obj\\",
+        "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizStarting/QuizStarting.csproj",
+        "packagesPath": "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages",
+        "outputPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizStarting/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jarom\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\QuizPersistence.csproj": {
-                "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\FileManagers\\QuizPersistence.csproj"
+              "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj": {
+                "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FileManagers/QuizPersistence.csproj"
               },
-              "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizLogicalComponents\\AbstractChainStructure.csproj": {
-                "projectPath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\QuizLogicalComponents\\AbstractChainStructure.csproj"
+              "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizLogicalComponents/AbstractChainStructure.csproj": {
+                "projectPath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/QuizLogicalComponents/AbstractChainStructure.csproj"
               }
             }
           }
@@ -280,7 +297,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -296,12 +314,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.22, 8.0.22]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
