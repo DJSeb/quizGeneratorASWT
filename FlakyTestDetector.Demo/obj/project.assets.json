@@ -1336,7 +1336,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MSTest.TestFramework": "3.1.1",
+          "MSTest.TestFramework": "4.0.1",
           "Microsoft.CodeAnalysis.CSharp": "4.8.0"
         },
         "compile": {
