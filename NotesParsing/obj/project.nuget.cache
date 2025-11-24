@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iIzP4UH4G9tbSOlcrnuqcmsCzFzktIy+WnQouaX0LZUgz/e3CnZ1auP+oRkEojXpsxfKjFBJ9ydPlcUUUTftTw==",
+  "dgSpecHash": "LEcvhuzErNc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jarom\\Desktop\\PG_EXER\\quizGenerator\\NotesParsing\\NotesParsing.csproj",
+  "projectFilePath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/NotesParsing/NotesParsing.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jarom\\.nuget\\packages\\htmlagilitypack\\1.11.67\\htmlagilitypack.1.11.67.nupkg.sha512"
+    "/home/runner/.nuget/packages/htmlagilitypack/1.11.67/htmlagilitypack.1.11.67.nupkg.sha512"
   ],
   "logs": []
 }
