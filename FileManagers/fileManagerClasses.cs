@@ -123,14 +123,28 @@ namespace QuizPersistence
         /// <returns>New path to the Topics folder with new name, if the <see cref="currentTopicDirectoryPath"/> is valid</returns>
         public static string? RenameTopic(string currentTopicDirectoryPath, string newName)
         {
+            return RenameTopic(currentTopicDirectoryPath, newName, 0);
+        }
+
+        private static string? RenameTopic(string currentTopicDirectoryPath, string newName, int depth)
+        {
+            // Prevent stack overflow from too many recursive calls
+            if (depth > 1000)
+            {
+                // Add timestamp to ensure uniqueness and stop recursion
+                newName = newName + "_" + DateTime.Now.Ticks;
+            }
+
             var currentTopicName = Path.GetDirectoryName(currentTopicDirectoryPath);
             if (currentTopicName == null) return null;
 
             string newPath = Path.Combine(currentTopicName, QuestionsFile.toTopicFileName(newName));
-            if (Directory.Exists(newPath))
+            
+            // Only recurse if depth limit not exceeded
+            if (Directory.Exists(newPath) && depth <= 1000)
             {
                 string uniqueName = addCopyToName(newName);
-                return RenameTopic(currentTopicDirectoryPath, uniqueName);
+                return RenameTopic(currentTopicDirectoryPath, uniqueName, depth + 1);
             }
             
             if (isTopicFolder(currentTopicDirectoryPath))
@@ -155,8 +169,20 @@ namespace QuizPersistence
 
         private static string getUniqueName(string name)
         {
-            if ( !isTopicFolder(Path.Combine(utilFolderPath, toTopicFileName(name)))) return name;
-            return getUniqueName(addCopyToName(name));
+            return getUniqueName(name, 0);
+        }
+
+        private static string getUniqueName(string name, int depth)
+        {
+            // Prevent stack overflow from too many recursive calls
+            if (depth > 1000)
+            {
+                // Add timestamp to ensure uniqueness if too many copies exist
+                return name + "_" + DateTime.Now.Ticks;
+            }
+
+            if (!isTopicFolder(Path.Combine(utilFolderPath, toTopicFileName(name)))) return name;
+            return getUniqueName(addCopyToName(name), depth + 1);
         }
 
         /// <summary>

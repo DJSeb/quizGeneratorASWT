@@ -1,17 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "IaIJhwj3Cnk=",
+  "dgSpecHash": "C6tvrtUZo0I=",
   "success": true,
   "projectFilePath": "/home/runner/work/quizGeneratorASWT/quizGeneratorASWT/FlakyTestDetector/FlakyTestDetector.csproj",
   "expectedPackageFiles": [
-    "/home/runner/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.4/microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.codeanalysis.common/4.8.0/microsoft.codeanalysis.common.4.8.0.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.codeanalysis.csharp/4.8.0/microsoft.codeanalysis.csharp.4.8.0.nupkg.sha512",
-    "/home/runner/.nuget/packages/mstest.analyzers/4.0.1/mstest.analyzers.4.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/mstest.testframework/4.0.1/mstest.testframework.4.0.1.nupkg.sha512",
-    "/home/runner/.nuget/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",
-    "/home/runner/.nuget/packages/system.reflection.metadata/7.0.0/system.reflection.metadata.7.0.0.nupkg.sha512",
-    "/home/runner/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.codeanalysis.analyzers/3.3.4/microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.codeanalysis.common/4.8.0/microsoft.codeanalysis.common.4.8.0.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.codeanalysis.csharp/4.8.0/microsoft.codeanalysis.csharp.4.8.0.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/mstest.analyzers/4.0.1/mstest.analyzers.4.0.1.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/mstest.testframework/4.0.1/mstest.testframework.4.0.1.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/system.reflection.metadata/7.0.0/system.reflection.metadata.7.0.0.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.windowsdesktop.app.ref/8.0.22/microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
+    "/home/runner/work/quizGeneratorASWT/.codeql-scratch/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }

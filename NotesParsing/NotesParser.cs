@@ -93,16 +93,33 @@ namespace NotesParsing
         /// <param name="node">The html node to be searched throw.</param>
         void goThrowNodes(HtmlNode node)
         {
+            goThrowNodes(node, 0);
+        }
+
+        private void goThrowNodes(HtmlNode node, int depth)
+        {
+            // Prevent stack overflow from deeply nested HTML structures
+            if (depth > 500)
+            {
+                // Skip processing extremely deep nodes to prevent stack overflow
+                return;
+            }
+
             HtmlNodeCollection children = node.ChildNodes;
             bool areInHeading = false;
             HtmlNode? currentHeadingAnswer = null;
             foreach (HtmlNode child in children)
             {
-                onNode(child, ref areInHeading, ref currentHeadingAnswer);
+                onNode(child, ref areInHeading, ref currentHeadingAnswer, depth);
             }
         }
 
         internal virtual void onNode(HtmlNode child, ref bool areInHeading, ref HtmlNode? currentHeadingAnswer)
+        {
+            onNode(child, ref areInHeading, ref currentHeadingAnswer, 0);
+        }
+
+        private void onNode(HtmlNode child, ref bool areInHeading, ref HtmlNode? currentHeadingAnswer, int depth)
         {
             areInHeading = false;
             if (child.NodeType != HtmlNodeType.Element)
@@ -133,7 +150,7 @@ namespace NotesParsing
 
             if (!areInHeading && !isQuestion)
             {
-                goThrowNodes(child);
+                goThrowNodes(child, depth + 1);
             }
 
             if (state.currentParentHeadingRank != 0 && state.noQuestionInHeadingYet && !areInHeading && currentHeadingAnswer != null)
@@ -221,10 +238,18 @@ namespace NotesParsing
             {
                 HtmlNode? currentParentHeading = resultCurrentPosition?.ParentNode;
                 int parentHeadingRank = state.currentParentHeadingRank - 1;
-                while (parentHeadingRank >= headingRank)
+                int maxIterations = 100; // Prevent infinite loop
+                int iterations = 0;
+                while (parentHeadingRank >= headingRank && currentParentHeading != null)
                 {
                     currentParentHeading = currentParentHeading?.ParentNode;
                     parentHeadingRank--;
+                    iterations++;
+                    if (iterations > maxIterations)
+                    {
+                        // Prevent infinite loop - break if we've gone too far
+                        break;
+                    }
                 }
                 resultCurrentPosition = currentParentHeading;
             }
@@ -248,9 +273,17 @@ namespace NotesParsing
         {
             string[] blockElements = { "p", "li", "ul", "ol", "pre", "div", "blockquote", "dl", "figure", "hr", "article", "footer", "header", "main", "section", "dd"  };
             HtmlNode parent = keySegment;
-            while (!blockElements.Contains(parent.Name) && !isHeading(parent))
+            int maxDepth = 1000; // Prevent infinite loop
+            int depth = 0;
+            while (!blockElements.Contains(parent.Name) && !isHeading(parent) && parent.ParentNode != null)
             {
                 parent = parent.ParentNode;
+                depth++;
+                if (depth > maxDepth)
+                {
+                    // If we've gone too deep, return the current node to prevent stack overflow
+                    return parent;
+                }
             }
             return parent;
         }
